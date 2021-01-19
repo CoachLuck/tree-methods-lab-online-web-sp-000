@@ -7,11 +7,18 @@ function findOrAdd(node, newNode) {
   if (node.data = newNode.data) {
     return true;
   }
-  if (node.data < newNode.data) {
+  if (node.data > newNode.data) {
     if(node.left) {
       return findOrAdd(node.left, newNode);
     } else {
       return node.left = newNode;
+    }
+  }
+  if (node.data < newNode.data) {
+    if (node.right) {
+      return findOrAdd(node.right, newNode);
+    } else {
+      return node.right = newNode;
     }
   }
   }
