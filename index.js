@@ -3,23 +3,23 @@ let firstNewNode = {data: 3, left: null, right: null}
 let secondNewNode = {data: 7, left: null, right: null}
 let thirdNewNode = {data: 9, left: null, right: null}
 
-function findOrAdd(currentNode, newNode){
-  if(currentNode.data == newNode.data){
+function findOrAdd(node, newNode){
+  if(node.data == newNode.data){
     return true
   }
-  if(newNode.data < currentNode.data){
-    if(currentNode.left){
-      return findOrAdd(currentNode.left, newNode)
+  if(newNode.data < node.data){
+    if(node.left){
+      return findOrAdd(node.left, newNode)
     } else {
-      return currentNode.left = newNode
+      return node.left = newNode
     }
   }
 
-  if(newNode.data > currentNode.data){
-    if(currentNode.right){
-      return findOrAdd(currentNode.right, newNode)
+  if(newNode.data > node.data){
+    if(node.right){
+      return findOrAdd(node.right, newNode)
     } else {
-      return currentNode.right = newNode
+      return node.right = newNode
     }
   }
 }
