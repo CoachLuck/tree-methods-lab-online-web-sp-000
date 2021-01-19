@@ -4,23 +4,16 @@ let secondNewNode = {data: 7, left: null, right: null}
 let thirdNewNode = {data: 9, left: null, right: null}
 
 function findOrAdd(node, newNode) {
-  let currentNode = node
   if (node.data = newNode.data) {
     return true;
-  } else if (newNode.data < node.data) {
-      currentNode = node.left
-      if (currentNode) {
-        findOrAdd(currentNode, newNode)
-      } else {
-        node.left = newNode
-      }
-  } else if (newNode.data > node.data) {
-    currentNode = node.right
-    if (currentNode) {
-      findOrAdd(currentNode, newNode)
+  } 
+  if (node.data < newNode.data) {
+    if(node.left) {
+      return findOrAdd(node.left, newNode);
     } else {
-      node.right = newNode
+      return node.left = newNode;
     }
+  }
   }
 }
 
