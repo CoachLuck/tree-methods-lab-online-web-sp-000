@@ -5,8 +5,8 @@ let thirdNewNode = {data: 9, left: null, right: null}
 
 function findOrAdd(node, newNode) {
   let currentNode = node
-  if (node.left == newNode || node.right == newNode) {
-    return (node.right) ? node.right : node.left;
+  if (node.data = newNode.data) {
+    return true;
   } else if (newNode.data < node.data) {
       currentNode = node.left
       if (currentNode) {
