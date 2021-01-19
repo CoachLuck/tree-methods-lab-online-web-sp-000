@@ -21,7 +21,6 @@ function findOrAdd(node, newNode) {
       return node.right = newNode;
     }
   }
-  }
 }
 
 function min(node) {
