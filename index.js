@@ -6,7 +6,7 @@ let thirdNewNode = {data: 9, left: null, right: null}
 function findOrAdd(node, newNode) {
   if (node.data = newNode.data) {
     return true;
-  } 
+  }
   if (node.data < newNode.data) {
     if(node.left) {
       return findOrAdd(node.left, newNode);
