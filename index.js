@@ -12,7 +12,7 @@ function findOrAdd(node, newNode){
   }
 
   if(newNode.data > node.data){
-    return node.right ? findOrAdd(node.right, newNode) : node.right = newN
+    return (node.right) ? findOrAdd(node.right, newNode) : node.right = newN
   }
 }
 
