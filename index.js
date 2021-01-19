@@ -9,11 +9,6 @@ function findOrAdd(node, newNode){
   }
   if(newNode.data < node.data){
     return (node.left) ? findOrAdd(node.left, newNode) : node.left = newNode;
-    if(node.left){
-      return findOrAdd(node.left, newNode)
-    } else {
-      return node.left = newNode
-    }
   }
 
   if(newNode.data > node.data){
