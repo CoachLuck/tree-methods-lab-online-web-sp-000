@@ -7,6 +7,7 @@ function findOrAdd(node, newNode){
   if(node.data == newNode.data){
     return true
   }
+  
   if(newNode.data < node.data){
     return (node.left) ? findOrAdd(node.left, newNode) : node.left = newNode;
   }
